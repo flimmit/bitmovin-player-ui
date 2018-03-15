@@ -1,0 +1,49 @@
+
+
+
+// ICONS
+$icons: D2CFC5; 		// rgb(210,207,197)
+$chapter: fff; 		// rgb(210,207,197)
+$iconsActive: D2CFC5;	// rgb(210,207,197)
+$dotColor: fff;			// #fff
+$hugePlay: fff;			// #fff
+$play: D2CFC5; 			// rgb(210,207,197)
+
+
+
+// Fonts
+@font-face {
+    font-family: "Libre Baskerville";
+    src: url("../fonts/LibreBaskerville-Regular.ttf") format("truetype");
+}
+$fontColor: #E7E5DE;
+$fontShadow: rgb(101, 97, 90);
+$selectboxColor: rgb(210,207,197); 
+$fontFamily: Ubuntu, sans-serif;
+$fontFamilyHeader: "Libre Baskerville",serif;
+
+
+
+// Containers
+$containerColor: #1C1C1A;
+
+
+
+// Containers shadow
+$bufferOverlayColor: rgba(101, 97, 90, 0.3); 
+$controlbarBackground: rgba(101, 97, 90, 0.3); 
+$markerBorder: rgb(230, 87, 76);
+
+
+
+// Player Seeking
+$currentSeekPosition: rgb(230, 87, 76);
+$seekingLine: rgb(101, 97, 90);
+$seekingBuffered: rgb(160,157,150);
+$marker: rgb(210,207,197);
+
+
+
+// Sound Seeking
+$soundCurrentSeekColor: rgb(230, 87, 76);
+$soundSeekingLine: rgb(101, 97, 90);

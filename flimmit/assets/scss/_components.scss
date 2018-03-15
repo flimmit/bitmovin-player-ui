@@ -1,0 +1,204 @@
+
+
+
+// Container
+.bitmovinplayer-ad-container, .bitmovinplayer-container {
+	background-color: $containerColor !important;
+}
+
+
+
+
+
+.bmpui-ui-skin-modern {
+	color: $fontColor; 
+	font-family: $fontFamily;
+
+
+
+
+	// Movie Title & Desc
+	.bmpui-ui-titlebar {
+		background: linear-gradient(to top, transparent, $bufferOverlayColor);
+
+		> .bmpui-container-wrapper {
+			@media (max-width: 800px) { display: none; }
+			@media (max-width: 1000px) { bottom: 4em; }
+			@media (min-width: 1900px) { bottom: 9em; }
+
+			.bmpui-label-metadata-title {
+				color: $fontColor;
+				font-family: $fontFamilyHeader;
+				text-shadow: 1px solid grey;
+				font-size: 2.1em;
+				@media (max-width: 1000px) { font-size: 1.5em; }
+			}
+
+			.bmpui-label-metadata-description {
+				color: $fontColor;
+				font-family: $fontFamily;
+				text-shadow: 1px solid grey;
+				font-size: 1.05em;
+				max-width: 60%;
+				@media (max-width: 1000px) { font-size: .9em; }
+			}
+		}
+	}
+
+	
+
+
+	// Movie Seekbar
+	.bmpui-ui-seekbar .bmpui-seekbar { 
+
+		.bmpui-seekbar-bufferlevel {
+			background-color: $seekingBuffered;
+		}
+
+		.bmpui-seekbar-backdrop {
+			background-color: $seekingLine;
+		}
+
+		.bmpui-seekbar-playbackposition {
+			background-color: $currentSeekPosition;
+		}
+	
+		.bmpui-seekbar-markers > .bmpui-seekbar-marker {
+			border-right: 2px solid $marker;
+		}
+
+	}
+
+
+	// Chapter Button
+	.bmpui-ui-chaptertogglebutton {
+		background-color: transparent;
+		background-position: center;
+		background-repeat: no-repeat;
+		border: 0;
+		cursor: pointer;
+		font-size: 1em;
+		height: 1.5em;
+		min-width: 1.5em;
+		padding: 0;
+		outline: 0;
+
+		> span {
+			display: none;
+		}
+	}
+
+
+
+
+
+	// Chapter Label
+  .bmpui-container-wrapper > .bmpui-chaptersPanel {
+      // Chapter Container arrow
+      &:after {
+        left: -14%;
+      }
+
+      .bmpui-container-wrapper {
+
+			.bmpui-ui-settings-panel-item {
+				border-bottom: none;
+				padding: 0;
+
+				.bmpui-chapterLabel {
+					display: block !important;
+					width: 100%;
+					text-align: center;
+					margin: 10px 0;
+					cursor: pointer;
+
+					.bmpui-label {
+						color: $fontColor;
+						display: block;
+						font-size: .85em;
+						border-bottom: 1px solid darken($fontColor, 5%);
+					}
+				}
+			}
+      }
+  }
+
+
+
+
+	// Sound Seekbar
+	.bmpui-ui-volumeslider .bmpui-seekbar { 
+
+		.bmpui-seekbar-playbackposition {
+			background-color: $soundCurrentSeekColor;
+		}
+
+		.bmpui-seekbar-backdrop {
+			background-color: $soundSeekingLine;
+		}
+	}
+
+
+
+
+	// Watermark
+	.bmpui-ui-watermark {
+		background: right 5% / 100% 100% no-repeat url("../../flimmit/assets/img/logo.svg");
+		margin: 0;
+		top: 20px;
+		right: 20px;
+		width: 6em;
+		height: 2em;
+		pointer-events: none;
+  		cursor: default;
+  		opacity: .7;
+	}
+
+
+
+
+	// Overlays
+	.bmpui-ui-controlbar {
+		background: linear-gradient(to bottom, transparent, $controlbarBackground);
+	}
+	.bmpui-ui-buffering-overlay {
+		background-color: $bufferOverlayColor;
+	}
+
+
+
+
+	// Settings
+	.bmpui-ui-selectbox {
+		color: $selectboxColor;
+		-moz-appearance: none;
+		-webkit-appearance:none;
+		&::-ms-expand {
+			display: none;
+		}
+		border-right: 3px solid lighten(rgba(17, 17, 17, 0.85), 50%);
+	}
+
+
+
+
+	// Movie Marker
+	.bmpui-ui-seekbar-label {
+
+		.bmpui-seekbar-label-inner {
+			border-bottom: 0.2em solid $markerBorder;
+
+			&::after {
+				border-top-color: $markerBorder;
+			}
+		}
+
+		.bmpui-seekbar-label-inner > .bmpui-container-wrapper .bmpui-seekbar-thumbnail {
+			width: 12em;
+		}
+	}
+
+
+
+
+}

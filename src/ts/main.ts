@@ -70,6 +70,10 @@ import {StorageUtils} from './storageutils';
 // HACK: gulp-tslint fails on unused files so we need this dummy import
 import {ArrayUtils as Dummy} from './utils'; // tslint:disable-line
 import {SubtitleSettingsResetButton} from './components/subtitlesettings/subtitlesettingsresetbutton';
+// Flimmit
+import {Flimmit} from '../../flimmit/FlimmitConfig';
+import {FlimmitChapters} from '../../flimmit/components/flimmitChapters';
+import {FlimmitChaptersSelectBox} from '../../flimmit/components/flimmitChaptersSelectBox';
 
 // Object.assign polyfill for ES5/IE9
 // https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
@@ -157,6 +161,10 @@ const playerui = {
   VolumeToggleButton,
   VRToggleButton,
   Watermark,
+  // Flimmit
+   Flimmit,
+   FlimmitChapters,
+   flimmitChaptersSelectBox: FlimmitChaptersSelectBox,
   // Subtitle related components
   subtitlesettings: {
     BackgroundColorSelectBox,

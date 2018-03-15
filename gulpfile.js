@@ -1,4 +1,23 @@
+var s3config = require('./config.js');
+console.log(s3config);
 var gulp = require('gulp');
+
+// S3 #17186
+
+var s3 = require('gulp-s3-upload')(s3config);
+
+gulp.task('upload', function() {
+    gulp.src('./dist/**') // what we want upload
+        .pipe(s3({
+            Bucket: 'bitmovin-ui.flimm-it.com',  //  Required
+            ACL:    'public-read'       //  Needs to be user-defined
+        }, {
+            // S3 Constructor Options, ie:
+            maxRetries: 5
+        }))
+    ;
+});
+// end of S3 #17186
 
 // Gulp plugins
 var sass = require('gulp-sass');
@@ -40,7 +59,7 @@ var paths = {
     html: ['./src/html/*.html'],
     tsmain: ['./src/ts/main.ts'],
     ts: ['./src/ts/**/*.ts'],
-    sass: ['./src/scss/**/*.scss']
+    sass: ['./src/scss/**/*.scss', './flimmit/assets/scss/*.scss']
   },
   target: {
     html: './dist',

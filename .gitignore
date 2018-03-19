@@ -1,6 +1,7 @@
 dist
 .idea
-.config.js
+config.js
+./package-lock.json
 
 ### WebStorm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm

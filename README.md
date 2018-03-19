@@ -1,3 +1,8 @@
+# Example of Flimmit Adoption
+[Live Demo](http://bitmovin-ui.flimm-it.com/)
+
+
+
 # Bitmovin Player UI [![npm version](https://badge.fury.io/js/bitmovin-player-ui.svg)](https://badge.fury.io/js/bitmovin-player-ui) [![Build Status](https://travis-ci.org/bitmovin/bitmovin-player-ui.svg?branch=master)](https://travis-ci.org/bitmovin/bitmovin-player-ui)
 The Bitmovin Adaptive Streaming Player UI
 

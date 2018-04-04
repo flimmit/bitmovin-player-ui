@@ -20,6 +20,9 @@
 	// Movie Title & Desc
 	.bmpui-ui-titlebar {
 		background: linear-gradient(to top, transparent, $bufferOverlayColor);
+		top: unset;
+		bottom: 12%;
+		background: none;
 
 		> .bmpui-container-wrapper {
 			@media (max-width: 800px) { display: none; }
@@ -96,14 +99,16 @@
   .bmpui-container-wrapper > .bmpui-chaptersPanel {
       // Chapter Container arrow
       &:after {
-        left: -14%;
+        left: -25%;
       }
 
       .bmpui-container-wrapper {
+		  margin: 0;
 
 			.bmpui-ui-settings-panel-item {
 				border-bottom: none;
 				padding: 0;
+				margin: 0;
 
 				.bmpui-chapterLabel {
 					display: block !important;
@@ -112,11 +117,24 @@
 					margin: 10px 0;
 					cursor: pointer;
 
+					&:last-child {
+						padding-bottom: 35px;
+					}
+
+					&:hover .bmpui-label {
+						color: $markerBorder;
+					}
+
 					.bmpui-label {
-						color: $fontColor;
+						color: darken($fontColor, 10%);
 						display: block;
-						font-size: .85em;
-						border-bottom: 1px solid darken($fontColor, 5%);
+						font-size: .9em;
+						border-bottom: 1px solid darken($fontColor, 60%);
+						padding: 0 25px;
+
+						&:hover {
+							color: $markerBorder;
+						}
 					}
 				}
 			}
@@ -171,12 +189,12 @@
 	// Settings
 	.bmpui-ui-selectbox {
 		color: $selectboxColor;
-		-moz-appearance: none;
+		/*-moz-appearance: none;
 		-webkit-appearance:none;
 		&::-ms-expand {
 			display: none;
 		}
-		border-right: 3px solid lighten(rgba(17, 17, 17, 0.85), 50%);
+		border-right: 3px solid lighten(rgba(17, 17, 17, 0.85), 50%);*/
 	}
 
 

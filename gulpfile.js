@@ -1,14 +1,13 @@
+var gulp = require('gulp');
+
+// S3 #17186
 var s3config = require('./config.js');
 
 if(typeof s3config.accessKeyId == 'undefined' || typeof s3config.secretAccessKey == 'undefined'){
 
-console.log('create a file config.js which contains the AWS credentials as an Object like { accessKeyId: "...", secretAccessKey: "...." }');
-throw Error('Missing AWS credentials');
+    console.log('create a file config.js which contains the AWS credentials as an Object like { accessKeyId: "...", secretAccessKey: "...." }');
+    throw Error('Missing AWS credentials');
 }
-
-var gulp = require('gulp');
-
-// S3 #17186
 
 var s3 = require('gulp-s3-upload')(s3config);
 

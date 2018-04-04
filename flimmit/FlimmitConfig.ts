@@ -18,10 +18,10 @@ export namespace Flimmit {
                 title: 'This is a Title powered by Flimmit',
                 description: 'This is a Description powered by Flimmit',
                 markers: [
-                    {time: 50, title: 'Flimmit One'},
-                    {time: 80, title: 'Flimmit Two'},
-                    {time: 200, title: 'Flimmmiit'},
-                    {time: 300, title: 'Flimmit Power'},
+                    {time: 50,  title: '1. Akt'},
+                    {time: 80,  title: '2. Akt'},
+                    {time: 200, title: '3. Akt'},
+                    {time: 300, title: '4. Akt'},
                 ],
             },
             subtitles: {

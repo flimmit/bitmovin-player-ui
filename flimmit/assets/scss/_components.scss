@@ -1,11 +1,11 @@
 
 
 
+
 // Container
 .bitmovinplayer-ad-container, .bitmovinplayer-container {
 	background-color: $containerColor !important;
 }
-
 
 
 
@@ -32,16 +32,18 @@
 			.bmpui-label-metadata-title {
 				color: $fontColor;
 				font-family: $fontFamilyHeader;
-				text-shadow: 1px solid grey;
-				font-size: 2.1em;
+				text-shadow: 1px 1px 1px black;
+				font-size: 2em;
+				font-weight: bold;
 				@media (max-width: 1000px) { font-size: 1.5em; }
 			}
 
 			.bmpui-label-metadata-description {
 				color: $fontColor;
 				font-family: $fontFamily;
-				text-shadow: 1px solid grey;
-				font-size: 1.05em;
+				text-shadow: 1px 1px 1px black;
+				font-size: 1em;
+				font-weight: bold;
 				max-width: 60%;
 				@media (max-width: 1000px) { font-size: .9em; }
 			}
@@ -94,12 +96,18 @@
 
 
 
+	// Settings panel arrow
+	.bmpui-ui-settings-panel::after {
+		left: 52%;
+	}
+
+
 
 	// Chapter Label
   .bmpui-container-wrapper > .bmpui-chaptersPanel {
       // Chapter Container arrow
       &:after {
-        left: -25%;
+        left: -10%;
       }
 
       .bmpui-container-wrapper {
@@ -128,9 +136,9 @@
 					.bmpui-label {
 						color: darken($fontColor, 10%);
 						display: block;
-						font-size: .9em;
+						font-size: .95em;
 						border-bottom: 1px solid darken($fontColor, 60%);
-						padding: 0 25px;
+						padding: 0 25px 8px 25px;
 
 						&:hover {
 							color: $markerBorder;
@@ -164,7 +172,7 @@
 		background: right 5% / 100% 100% no-repeat url("../../flimmit/assets/img/logo.svg");
 		margin: 0;
 		top: 20px;
-		right: 20px;
+		left: 20px;
 		width: 6em;
 		height: 2em;
 		pointer-events: none;

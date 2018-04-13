@@ -19,6 +19,18 @@ export interface SettingsToggleButtonConfig extends ToggleButtonConfig {
 }
 
 /**
+ * If Chapterspanel is visible, settingsmenu is hidden
+ * @returns {boolean}
+ */
+function isSettingsHidden() {
+    let settings = document.getElementsByClassName('bmpui-ui-chaptertogglebutton');
+    let classes = settings[0].className;
+    if ( classes.includes('bmpui-on') ) {
+        return false;
+    }
+    return true;
+}
+/**
  * A button that toggles visibility of a settings panel.
  */
 export class SettingsToggleButton extends ToggleButton<SettingsToggleButtonConfig> {
@@ -45,7 +57,9 @@ export class SettingsToggleButton extends ToggleButton<SettingsToggleButtonConfi
     let settingsPanel = config.settingsPanel;
 
     this.onClick.subscribe(() => {
-      settingsPanel.toggleHidden();
+        if (isSettingsHidden()) {
+          settingsPanel.toggleHidden();
+        }
     });
     settingsPanel.onShow.subscribe(() => {
       // Set toggle status to on when the settings panel shows

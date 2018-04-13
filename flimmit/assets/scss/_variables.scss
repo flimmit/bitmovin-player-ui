@@ -12,15 +12,11 @@ $play: D2CFC5; 			// rgb(210,207,197)
 
 
 // Fonts
-@font-face {
-    font-family: "Libre Baskerville";
-    src: url("../fonts/LibreBaskerville-Regular.ttf") format("truetype");
-}
 $fontColor: #E7E5DE;
 $fontShadow: rgb(101, 97, 90);
 $selectboxColor: rgb(210,207,197); 
-$fontFamily: Ubuntu, sans-serif;
-$fontFamilyHeader: "Libre Baskerville",serif;
+$fontFamily: 'Ubuntu', sans-serif;
+$fontFamilyHeader: 'Libre Baskerville',serif;
 
 
 

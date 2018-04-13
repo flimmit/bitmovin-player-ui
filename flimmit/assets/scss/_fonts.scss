@@ -1,0 +1,70 @@
+
+
+// Fonts
+@font-face {
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+  font-weight: 400;
+  src:    local('Libre Baskerville Regular'), local('Libre Baskerville Regular'),
+  url(../fonts/LibreBaskerville-Regular.ttf) format('ttf')
+}
+@font-face {
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/LibreBaskerville-Bold.ttf") format("ttf")
+}
+@font-face {
+  font-family: "Libre Baskerville";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/LibreBaskerville-Italic.ttf") format('ttf')
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Ubuntu-Regular.ttf) format('ttf')
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Ubuntu-Bold.ttf") format('ttf');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/Ubuntu-BoldItalic.ttf") format('ttf');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/Ubuntu-Italic.ttf") format('ttf');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Ubuntu-Light.ttf") format('ttf');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 300;
+  src: url("../fonts/Ubuntu-LightItalic.ttf") format('ttf');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Ubuntu-Medium.ttf") format('ttf');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 600;
+  src: url("../fonts/Ubuntu-MediumItalic.ttf") format('ttf');
+}

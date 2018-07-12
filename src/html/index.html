@@ -85,14 +85,14 @@
                     '',
                     new bitmovin.playerui.Container({
                        components: [
-                            // new bitmovin.playerui.FlimmitImage(flimmitUiConfig.chanells.next.img),
+                            new bitmovin.playerui.FlimmitLabel( { text: flimmitUiConfig.chanells.next.img }),
                             new bitmovin.playerui.Label({text: flimmitUiConfig.chanells.next.title, cssClasses: ["chanellText"]}),
-                           new bitmovin.playerui.Label({text: flimmitUiConfig.chanells.next.time, cssClasses: ["chanellText"]}),
+                            new bitmovin.playerui.Label({text: flimmitUiConfig.chanells.next.time, cssClasses: ["chanellText"]}),
                             new bitmovin.playerui.Button({ text: "> " + flimmitUiConfig.chanells.next.more, onClick: "asda", cssClasses: ["chanellButton"] }),
                             // new bitmovin.playerui.FlimmitImage(flimmitUiConfig.chanells.later.img),
-                           new bitmovin.playerui.Label({text: flimmitUiConfig.chanells.later.title, cssClasses: ["chanellText"]}),
-                           new bitmovin.playerui.Label({text: flimmitUiConfig.chanells.later.time, cssClasses: ["chanellText"]}),
-                           new bitmovin.playerui.Button({ text: "> " + flimmitUiConfig.chanells.later.more, onClick: "asda", cssClasses: ["chanellButton"] }),
+                            new bitmovin.playerui.Label({text: flimmitUiConfig.chanells.later.title, cssClasses: ["chanellText"]}),
+                            new bitmovin.playerui.Label({text: flimmitUiConfig.chanells.later.time, cssClasses: ["chanellText"]}),
+                            new bitmovin.playerui.Button({ text: "> " + flimmitUiConfig.chanells.later.more, onClick: "asda", cssClasses: ["chanellButton"] }),
                         ],
                         cssClasses: ['chanells']
                     })

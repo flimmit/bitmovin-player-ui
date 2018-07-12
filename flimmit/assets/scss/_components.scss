@@ -95,6 +95,69 @@
 
 
 
+	.bmpui-ui-chanelltogglebutton {
+		background-color: transparent;
+		background-position: center;
+		background-repeat: no-repeat;
+		border: 0;
+		cursor: pointer;
+		font-size: 1.2em;
+		height: 2.5em;
+		min-width: 3.5em;
+		padding: 0;
+		margin: 0;
+		outline: 0;
+		background-color: white;
+		border-top-left-radius: 40%;
+		border-bottom-left-radius: 40%;
+	}
+
+	.bmpui-channels.bmpui-ui-controlbar {
+		background: none;
+	}
+	.bmpui-channels {
+		position: absolute;
+		right: 0;
+		top: 47%;
+		width: 3.5em;
+		height: 2.5em;
+		padding: 0;
+		margin: 0;
+	}
+
+	.bmpui-chanellPanel {
+		display: block;
+		width: 30%;
+		height: 70%;
+		position: absolute;
+		right: 0;
+		top: 15%;
+		.bmpui-chanellLabel {
+			.bmpui-label {
+				display: block;
+			}
+		}
+	}
+
+	.bmpui-chanellButton {
+		cursor: pointer;
+		z-index: 999 !important;
+		span {
+			display: block !important;
+			cursor: pointer;
+		}
+	}
+
+
+	.bmpui-container-wrapper .bmpui-chanellPanel {
+		&:after {
+			display: none !important;
+			border: none !important;
+			left: 0;
+		}
+	}
+
+
 
 	// Settings panel arrow
 	.bmpui-ui-settings-panel::after {

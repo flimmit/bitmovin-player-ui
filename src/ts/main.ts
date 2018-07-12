@@ -73,6 +73,8 @@ import {SubtitleSettingsResetButton} from './components/subtitlesettings/subtitl
 // Flimmit
 import {Flimmit} from '../../flimmit/FlimmitConfig';
 import {FlimmitChapters} from '../../flimmit/components/flimmitChapters';
+import {FlimmitChanells} from '../../flimmit/components/flimmitChanells';
+import {FlimmitChannellContainer} from '../../flimmit/components/flimmitChanellContainer';
 import {FlimmitChaptersSelectBox} from '../../flimmit/components/flimmitChaptersSelectBox';
 
 // Object.assign polyfill for ES5/IE9
@@ -164,6 +166,8 @@ const playerui = {
   // Flimmit
    Flimmit,
    FlimmitChapters,
+   FlimmitChanells,
+   flimmitChannellContainer: FlimmitChannellContainer,
    flimmitChaptersSelectBox: FlimmitChaptersSelectBox,
   // Subtitle related components
   subtitlesettings: {

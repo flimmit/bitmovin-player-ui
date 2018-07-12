@@ -79,6 +79,29 @@
             hidden: true
         });
 
+        var chanellPanel = new bitmovin.playerui.SettingsPanel({
+            components: [
+                new bitmovin.playerui.SettingsPanelItem(
+                    '',
+                    new bitmovin.playerui.Container({
+                       components: [
+                            // new bitmovin.playerui.FlimmitImage(flimmitUiConfig.chanells.next.img),
+                            new bitmovin.playerui.Label({text: flimmitUiConfig.chanells.next.title, cssClasses: ["chanellText"]}),
+                           new bitmovin.playerui.Label({text: flimmitUiConfig.chanells.next.time, cssClasses: ["chanellText"]}),
+                            new bitmovin.playerui.Button({ text: "> " + flimmitUiConfig.chanells.next.more, onClick: "asda", cssClasses: ["chanellButton"] }),
+                            // new bitmovin.playerui.FlimmitImage(flimmitUiConfig.chanells.later.img),
+                           new bitmovin.playerui.Label({text: flimmitUiConfig.chanells.later.title, cssClasses: ["chanellText"]}),
+                           new bitmovin.playerui.Label({text: flimmitUiConfig.chanells.later.time, cssClasses: ["chanellText"]}),
+                           new bitmovin.playerui.Button({ text: "> " + flimmitUiConfig.chanells.later.more, onClick: "asda", cssClasses: ["chanellButton"] }),
+                        ],
+                        cssClasses: ['chanells']
+                    })
+                )
+            ],
+            cssClasses: ['chanellPanel'],
+            hidden: true
+        });
+
         var subtitleOverlay = new bitmovin.playerui.SubtitleOverlay();
 
         var subtitleSettingsPanel = new bitmovin.playerui.subtitlesettings.SubtitleSettingsPanel({
@@ -102,9 +125,21 @@
         var flimmitUI = new bitmovin.playerui.UIContainer({
             components: [
                 subtitleOverlay,
+                chanellPanel,
                 new bitmovin.playerui.BufferingOverlay(),
                 new bitmovin.playerui.PlaybackToggleOverlay(),
                 new bitmovin.playerui.CastStatusOverlay(),
+                new bitmovin.playerui.ControlBar({
+                    components: [
+                        new bitmovin.playerui.Container({
+                            components: [
+                                new bitmovin.playerui.FlimmitChanells({ settingsPanel: chanellPanel })
+                            ]
+                        })
+                    ],
+                    cssClasses: ['channels']
+
+                }),
                 new bitmovin.playerui.ControlBar({
                     components: [
                         settingsPanel,

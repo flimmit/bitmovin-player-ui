@@ -48,6 +48,10 @@ export namespace Flimmit {
                 {title: 'Recommendation 11', url: 'http://bitmovin.com', thumbnail: 'http://placehold.it/300x300', duration: 435},
                 {title: 'Recommendation 12: Ain\'t no better video than this', url: 'http://bitmovin.com', thumbnail: 'http://placehold.it/300x300', duration: 34},
             ],
+            chanells: {
+                next:  {time: '12:40', title: 'titleGleich', img: 'www.www.gleich', more: 'linkGleich' },
+                later: {time: '15:50', title: 'titleLater', img: 'www.www.later', more: 'linkLater' },
+            },
         };
     }
 }

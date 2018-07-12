@@ -34,7 +34,7 @@ export class FlimmitChaptersSelectBox extends Container<ContainerConfig> {
     getButtons(): Array<any>  {
         let buttons = [];
         for (let chapter of this.getChapters()) {
-            buttons.push(new FlimmitChapterButton( {chapter: chapter}));
+            buttons.push(new FlimmitChapterButton( {chapter: chapter} ) );
         }
 
         return buttons;

@@ -49,8 +49,8 @@ export namespace Flimmit {
                 {title: 'Recommendation 12: Ain\'t no better video than this', url: 'http://bitmovin.com', thumbnail: 'http://placehold.it/300x300', duration: 34},
             ],
             chanells: {
-                next:  {time: '12:40', title: 'titleGleich', img: 'https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg', more: 'https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg' },
-                later: {time: '15:50', title: 'titleLater', img: 'www.www.later', more: 'https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg' },
+                next:  {time: '12:40', title: 'titleGleich', img: 'https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg', more: 'https://www.myfidelio.at/channel' },
+                later: {time: '15:50', title: 'titleLater', img: 'https://i.ytimg.com/vi/YCaGYUIfdy4/maxresdefault.jpg', more: 'https://www.myfidelio.at' },
             },
         };
     }

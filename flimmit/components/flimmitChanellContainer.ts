@@ -1,7 +1,7 @@
 import {UIInstanceManager} from './../../src/ts/uimanager';
 import {Container, ContainerConfig} from '../../src/ts/components/container';
 import {Flimmit} from './../FlimmitConfig';
-//import {FlimmitButton} from './flimmitButton';
+import {FlimmitButton} from './flimmitButton';
 
 
 /**
@@ -14,16 +14,22 @@ export class FlimmitChannellContainer extends Container<ContainerConfig> {
 
     constructor(config: ContainerConfig) {
         super(config);
-        /*this.config = this.mergeConfig(<ContainerConfig>config, {
+        this.getAjaxContent("asdas");
+        this.config = this.mergeConfig(<ContainerConfig>config, {
             components: this.getAssets(),
-        }, this.config);*/
+
+        }, this.config);
+    }
+
+    getAjaxContent(url: string) {
+
     }
 
     configure(player: bitmovin.PlayerAPI, uimanager: UIInstanceManager): void {
         super.configure(player, uimanager);
     }
 
-/*    getLater(): Object {
+    getLater(): Object {
         if (Object.keys(Flimmit.getUiConfig().chanells).length === 0 && Flimmit.getUiConfig().chanells.constructor === Object) {
             return {};
         }
@@ -43,7 +49,7 @@ export class FlimmitChannellContainer extends Container<ContainerConfig> {
         let assets = [];
         assets.push(new FlimmitButton( { next: this.getNext(), later: this.getLater() } ) );
         return assets;
-    }*/
+    }
 
 
 }

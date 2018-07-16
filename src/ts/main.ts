@@ -72,7 +72,8 @@ import {ArrayUtils as Dummy} from './utils'; // tslint:disable-line
 import {SubtitleSettingsResetButton} from './components/subtitlesettings/subtitlesettingsresetbutton';
 // Flimmit
 import {Flimmit} from '../../flimmit/FlimmitConfig';
-import {FlimmitLabel} from '../../flimmit/components/flimmitLabel';
+import {FlimmitImage} from '../../flimmit/components/flimmitImage';
+import {FlimmitButton} from '../../flimmit/components/flimmitButton';
 import {FlimmitChapters} from '../../flimmit/components/flimmitChapters';
 import {FlimmitChanells} from '../../flimmit/components/flimmitChanells';
 import {FlimmitChannellContainer} from '../../flimmit/components/flimmitChanellContainer';
@@ -168,7 +169,8 @@ const playerui = {
    Flimmit,
    FlimmitChapters,
    FlimmitChanells,
-    FlimmitLabel,
+   FlimmitImage: FlimmitImage,
+   FlimmitButton: FlimmitButton,
    flimmitChannellContainer: FlimmitChannellContainer,
    flimmitChaptersSelectBox: FlimmitChaptersSelectBox,
   // Subtitle related components

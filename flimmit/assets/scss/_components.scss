@@ -1,6 +1,8 @@
 
 
-
+.inline {
+	display: inline-block !important;
+}
 
 // Container
 .bitmovinplayer-ad-container, .bitmovinplayer-container {
@@ -94,7 +96,7 @@
 	}
 
 
-
+	// Channel Button
 	.bmpui-ui-chanelltogglebutton {
 		background-color: transparent;
 		background-position: center;
@@ -112,9 +114,19 @@
 		border-bottom-left-radius: 40%;
 	}
 
+	// Chanell Button after arrow
 	.bmpui-channels.bmpui-ui-controlbar {
 		background: none;
 	}
+	.bmpui-container-wrapper .bmpui-chanellPanel {
+		&:after {
+			display: none !important;
+			border: none !important;
+			left: 0;
+		}
+	}
+
+	// Chanell Containers
 	.bmpui-channels {
 		position: absolute;
 		right: 0;
@@ -124,7 +136,6 @@
 		padding: 0;
 		margin: 0;
 	}
-
 	.bmpui-chanellPanel {
 		display: block;
 		width: 30%;
@@ -132,6 +143,27 @@
 		position: absolute;
 		right: 0;
 		top: 15%;
+		background-color: #e7e5de;
+		color: black;
+		& > .bmpui-container-wrapper {
+			height: 100%;
+			border: none;
+			margin: 0;
+			padding: 0;
+			.bmpui-ui-settings-panel-item {
+				height: 100%;
+				border: none;
+				margin: 0;
+				padding: 0;
+				.bmpui-container-wrapper {
+					height: 100%;
+					overflow: hidden;
+					.bmpui-ui-container {
+						height: 100%;
+					}
+				}
+			}
+		}
 		.bmpui-chanellLabel {
 			.bmpui-label {
 				display: block;
@@ -139,22 +171,37 @@
 		}
 	}
 
+	// Chanell Asset Button & Text
 	.bmpui-chanellButton {
 		cursor: pointer;
-		z-index: 999 !important;
+		text-align: right;
 		span {
 			display: block !important;
 			cursor: pointer;
 		}
 	}
-
-
-	.bmpui-container-wrapper .bmpui-chanellPanel {
-		&:after {
-			display: none !important;
-			border: none !important;
-			left: 0;
+	.bmpui-chanellText, .bmpui-chanellButton {
+		display: block;
+		height: 6.66%;
+		.bmpui-label {
+			color: black;
 		}
+	}
+
+	// Chanell Asset Title
+	.bmpui-chanellTitle {
+		display: block !important;
+		width: 100% !important;
+		height: 6.66%;
+	}
+
+	// Chanell Asset Bild
+	.bmpui-chanellPanel .bmpui-chanellBild {
+		display: block;
+		width: 100% !important;
+		height: 25%;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 
 

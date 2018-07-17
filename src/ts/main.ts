@@ -76,7 +76,7 @@ import {FlimmitImage} from '../../flimmit/components/flimmitImage';
 import {FlimmitButton} from '../../flimmit/components/flimmitButton';
 import {FlimmitChapters} from '../../flimmit/components/flimmitChapters';
 import {FlimmitChanells} from '../../flimmit/components/flimmitChanells';
-import {FlimmitChannellContainer} from '../../flimmit/components/flimmitChanellContainer';
+import {FlimmitChannellContainer} from '../../flimmit/components/flimmitChannelContainer';
 import {FlimmitChaptersSelectBox} from '../../flimmit/components/flimmitChaptersSelectBox';
 
 // Object.assign polyfill for ES5/IE9

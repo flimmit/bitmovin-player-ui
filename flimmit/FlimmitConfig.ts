@@ -48,9 +48,21 @@ export namespace Flimmit {
                 {title: 'Recommendation 11', url: 'http://bitmovin.com', thumbnail: 'http://placehold.it/300x300', duration: 435},
                 {title: 'Recommendation 12: Ain\'t no better video than this', url: 'http://bitmovin.com', thumbnail: 'http://placehold.it/300x300', duration: 34},
             ],
-            chanells: {
-                next:  {time: '12:40', title: 'titleGleich', img: 'https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg', more: 'https://www.myfidelio.at/channel' },
-                later: {time: '15:50', title: 'titleLater', img: 'https://i.ytimg.com/vi/YCaGYUIfdy4/maxresdefault.jpg', more: 'https://www.myfidelio.at' },
+            channels: {
+                next:  {
+                    img: 'https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg',
+                    ts: 'Gleich',
+                    title: 'titleGleich',
+                    time: 1515308465,
+                    more: 'https://www.myfidelio.at/channel',
+                },
+                later: {
+                    img: 'https://i.ytimg.com/vi/YCaGYUIfdy4/maxresdefault.jpg',
+                    ts: 'Später',
+                    title: 'titleLater',
+                    time: 1483264661,
+                    more: 'https://www.myfidelio.at' ,
+                },
             },
         };
     }

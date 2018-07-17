@@ -10,13 +10,14 @@ export interface FlimmitButtonConfig extends ComponentConfig {
 }
 
 export class FlimmitButton extends Button<ButtonConfig> {
+    protected link?: string;
 
     constructor(config: FlimmitButtonConfig) {
         super(config);
-        this.config = this.mergeConfig(config, {
-            text: '',
-            link: '',
-        }, <FlimmitButtonConfig>this.config);
+        this.link = config.link;
+        this.config.text = this.config.text;
+        this.config.cssClasses = ['chanellButton inline'];
+        this.onClick.subscribe(() => { console.log('asdasd'); });
     }
 }
 

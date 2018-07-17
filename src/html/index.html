@@ -71,34 +71,18 @@
         var chapterPanel = new bitmovin.playerui.SettingsPanel({
             components: [
                 new bitmovin.playerui.SettingsPanelItem(
-                    '',
+                    null,
                     new bitmovin.playerui.flimmitChaptersSelectBox({ cssClasses: ['chapters'] })
                 )
             ],
             cssClasses: ['chaptersPanel'],
             hidden: true
         });
-        var chanellPanel = new bitmovin.playerui.SettingsPanel({
+        var channelPanel = new bitmovin.playerui.SettingsPanel({
             components: [
                 new bitmovin.playerui.SettingsPanelItem(
-                    '',
-                    new bitmovin.playerui.Container({
-                       components: [
-                           // Asset_1
-                           new bitmovin.playerui.FlimmitImage( { text: '',img: flimmitUiConfig.chanells.next.img }),
-                           new bitmovin.playerui.Label({text: "Gleich", cssClasses: ["chanellText"]}),
-                           new bitmovin.playerui.Label({text: flimmitUiConfig.chanells.next.title, cssClasses: ["chanellText bmpui-chanellTitle"]}),
-                           new bitmovin.playerui.Label({text: flimmitUiConfig.chanells.next.time, cssClasses: ["chanellText inline"]}),
-                           new bitmovin.playerui.FlimmitButton({ text: "> mehr", link: flimmitUiConfig.chanells.next.more, cssClasses: ["chanellButton inline"] }),
-                            // Asset_2
-                           new bitmovin.playerui.FlimmitImage( { text: '',img: flimmitUiConfig.chanells.later.img }),
-                           new bitmovin.playerui.Label({text: "Später", cssClasses: ["chanellText"]}),
-                           new bitmovin.playerui.Label({text: flimmitUiConfig.chanells.later.title, cssClasses: ["chanellText bmpui-chanellTitle"]}),
-                           new bitmovin.playerui.Label({text: flimmitUiConfig.chanells.later.time, cssClasses: ["chanellText inline"]}),
-                           new bitmovin.playerui.Button({ text: "> mehr", cssClasses: ["chanellButton inline"] }),
-                        ],
-                        cssClasses: ['chanells']
-                    })
+                    null,
+                    new bitmovin.playerui.flimmitChannellContainer()
                 )
             ],
             cssClasses: ['chanellPanel'],
@@ -128,7 +112,7 @@
         var flimmitUI = new bitmovin.playerui.UIContainer({
             components: [
                 subtitleOverlay,
-                chanellPanel,
+                channelPanel,
                 new bitmovin.playerui.BufferingOverlay(),
                 new bitmovin.playerui.PlaybackToggleOverlay(),
                 new bitmovin.playerui.CastStatusOverlay(),
@@ -136,7 +120,7 @@
                     components: [
                         new bitmovin.playerui.Container({
                             components: [
-                                new bitmovin.playerui.FlimmitChanells({ settingsPanel: chanellPanel })
+                                new bitmovin.playerui.FlimmitChanells({ settingsPanel: channelPanel })
                             ]
                         })
                     ],

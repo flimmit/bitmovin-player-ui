@@ -119,6 +119,7 @@
 		background: none;
 	}
 	.bmpui-container-wrapper .bmpui-chanellPanel {
+		z-index: 99;
 		&:after {
 			display: none !important;
 			border: none !important;
@@ -135,6 +136,7 @@
 		height: 2.5em;
 		padding: 0;
 		margin: 0;
+		z-index: 100;
 	}
 	.bmpui-chanellPanel {
 		display: block;
@@ -192,14 +194,13 @@
 	.bmpui-chanellTitle {
 		display: block !important;
 		width: 100% !important;
-		height: 6.66%;
 	}
 
 	// Chanell Asset Bild
 	.bmpui-chanellPanel .bmpui-chanellBild {
 		display: block;
 		width: 100% !important;
-		height: 25%;
+		height: 30%;
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
@@ -235,8 +236,8 @@
 					margin: 10px 0;
 					cursor: pointer;
 
-					&:last-child {
-						padding-bottom: 35px;
+					&:last-child span {
+						border: none;
 					}
 
 					&:hover .bmpui-label {

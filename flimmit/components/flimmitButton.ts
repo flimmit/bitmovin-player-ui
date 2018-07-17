@@ -17,7 +17,19 @@ export class FlimmitButton extends Button<ButtonConfig> {
         this.link = config.link;
         this.config.text = this.config.text;
         this.config.cssClasses = ['chanellButton inline'];
+        let url = 'http://myjson.com/k0joe';
+        this.getAjaxContent(url);
         this.onClick.subscribe(() => { console.log('asdasd'); });
+    }
+
+    getAjaxContent(url: string) {
+        fetch(url)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(myJson) {
+                console.log(myJson);
+            });
     }
 }
 

@@ -10,29 +10,12 @@ import {FlimmitImage} from './flimmitImage';
  * A select box providing a selection between 'auto' and the available audio qualities.
  */
 export class FlimmitChannellContainer extends Container<ContainerConfig> {
-
-    getAjaxContent(url: string) {
-        fetch(url)
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(myJson) {
-                console.log(myJson);
-            });
-    }
-
     constructor(config: ContainerConfig) {
         super(config);
-        let url = 'http://myjson.com/k0joe';
-        this.getAjaxContent(url);
         this.config = this.mergeConfig(<ContainerConfig>config, {
             components: this.getComponents(),
             cssClasses: ['chanells'],
         }, this.config);
-    }
-
-    configure(player: bitmovin.PlayerAPI, uimanager: UIInstanceManager): void {
-        super.configure(player, uimanager);
     }
 
     getDate(time: number): string {

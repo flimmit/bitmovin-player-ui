@@ -63,7 +63,7 @@ var paths = {
   source: {
     html: ['./src/html/*.html'],
     tsmain: ['./src/ts/main.ts'],
-    ts: ['./src/ts/**/*.ts'],
+    ts: ['./src/ts/**/*.ts', './flimmit/**/*.ts'],
     sass: ['./src/scss/**/*.scss', './flimmit/assets/scss/*.scss']
   },
   target: {

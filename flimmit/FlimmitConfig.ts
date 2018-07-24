@@ -50,18 +50,18 @@ export namespace Flimmit {
             ],
             channels: {
                 next:  {
-                    img: 'https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg',
-                    ts: 'Gleich',
-                    title: 'titleGleich',
+                    imageUrl: 'https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg',
+                    label: 'Gleich',
+                    title: 'Portrait Edita Gruberová',
                     time: 1515308465,
-                    more: 'https://www.myfidelio.at/channel',
+                    button: { text: '< mehr', cssClasses: ['channelButton inline'], callback: '<h1>HI</h1>' },
                 },
                 later: {
-                    img: 'https://i.ytimg.com/vi/YCaGYUIfdy4/maxresdefault.jpg',
-                    ts: 'Später',
-                    title: 'titleLater',
+                    imageUrl: 'https://i.ytimg.com/vi/YCaGYUIfdy4/maxresdefault.jpg',
+                    label: 'Später',
+                    title: 'Donizetti, Roberto Devereux',
                     time: 1483264661,
-                    more: 'https://www.myfidelio.at' ,
+                    button: { text: '< mehr', cssClasses: ['channelButton inline'], callback: '<h1>HI2</h1>' },
                 },
             },
         };

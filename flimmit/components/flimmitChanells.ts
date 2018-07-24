@@ -30,7 +30,7 @@ export class FlimmitChanells extends ToggleButton<SettingsToggleButtonConfig> {
         }
 
         this.config = this.mergeConfig(config, {
-            cssClass: 'ui-chanelltogglebutton',
+            cssClass: 'ui-channelToggleButton',
             text: '',
             settingsPanel: null,
             autoHideWhenNoActiveSettings: true,

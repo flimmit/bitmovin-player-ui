@@ -14,7 +14,7 @@ export class FlimmitImage extends Label<LabelConfig> {
     constructor(config: FlimmitImageConfig) {
         super(config);
         this.config = this.mergeConfig(config, {
-            cssClass: 'chanellBild',
+            cssClass: 'channelImage',
             text: '',
             img: '',
         }, <FlimmitImageConfig>this.config);

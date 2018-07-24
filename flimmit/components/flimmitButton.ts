@@ -6,30 +6,29 @@ export interface FlimmitButtonConfig extends ComponentConfig {
      * The text on the button.
      */
     text?: string;
-    link?: string;
+    callback?: any;
 }
 
 export class FlimmitButton extends Button<ButtonConfig> {
-    protected link?: string;
 
     constructor(config: FlimmitButtonConfig) {
         super(config);
-        this.link = config.link;
         this.config.text = this.config.text;
-        this.config.cssClasses = ['chanellButton inline'];
-        let url = 'http://myjson.com/k0joe';
-        this.getAjaxContent(url);
-        this.onClick.subscribe(() => { console.log('asdasd'); });
-    }
+        this.config.cssClasses = ['channelButton inline'];
+        this.onClick.subscribe(() => {
+            if ( document.getElementsByClassName('overlay').length >= 1 ) {
+                return;
+            }
+            let newDiv = document.createElement('div');
+            newDiv.setAttribute('class', 'overlay');
+            newDiv.setAttribute('id', 'overlay');
+            newDiv.innerHTML = '<div id="data" class="data"><header><span class="close" id="close">X</span></header><section>' + config.callback + '</section></div>';
+            document.body.appendChild(newDiv);
 
-    getAjaxContent(url: string) {
-        fetch(url)
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(myJson) {
-                console.log(myJson);
+            document.getElementById('close').addEventListener('click', () => {
+                document.getElementById('overlay').remove();
             });
+        });
     }
 }
 

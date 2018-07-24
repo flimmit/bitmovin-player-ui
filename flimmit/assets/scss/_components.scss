@@ -1,7 +1,42 @@
 
-
 .inline {
 	display: inline-block !important;
+}
+
+// channel overlay, data
+.overlay {
+	background-color: rgba(0,0,0, .7);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999 !important;
+}
+.data {
+	position: fixed;
+	top: 10%;
+	left: 20%;
+	background-color: white;
+	width: 60%;
+	height: 80%;
+	overflow: auto;
+	box-shadow: 0 0 6px lightgray;
+	animation-name: animate;
+	animation-duration: 300ms;
+	header {
+		overflow: auto;
+		.close {
+			padding: .5em;
+		}
+	}
+	section {
+		padding: 20px 40px;
+	}
+}
+@keyframes animate {
+	0%   { width: 5%; opacity: 0.5; }
+	100% { width: 60%; opacity: 1; }
 }
 
 // Container
@@ -9,15 +44,10 @@
 	background-color: $containerColor !important;
 }
 
-
-
-
+// Components
 .bmpui-ui-skin-modern {
-	color: $fontColor; 
+	color: $fontColor;
 	font-family: $fontFamily;
-
-
-
 
 	// Movie Title & Desc
 	.bmpui-ui-titlebar {
@@ -52,31 +82,62 @@
 		}
 	}
 
-	
-
-
 	// Movie Seekbar
-	.bmpui-ui-seekbar .bmpui-seekbar { 
+	.bmpui-ui-seekbar .bmpui-seekbar {
 
 		.bmpui-seekbar-bufferlevel {
 			background-color: $seekingBuffered;
 		}
-
 		.bmpui-seekbar-backdrop {
 			background-color: $seekingLine;
 		}
-
 		.bmpui-seekbar-playbackposition {
 			background-color: $currentSeekPosition;
 		}
-	
 		.bmpui-seekbar-markers > .bmpui-seekbar-marker {
 			border-right: 2px solid $marker;
 		}
 
 	}
 
-
+	// Chapter Label
+	.bmpui-container-wrapper > .bmpui-chaptersPanel {
+		// Chapter Container arrow
+		&:after {
+			left: -10%;
+		}
+		.bmpui-container-wrapper {
+			margin: 0;
+			.bmpui-ui-settings-panel-item {
+				border-bottom: none;
+				padding: 0;
+				margin: 0;
+				.bmpui-chapterLabel {
+					display: block !important;
+					width: 100%;
+					text-align: center;
+					margin: 10px 0;
+					cursor: pointer;
+					&:last-child span {
+						border: none;
+					}
+					&:hover .bmpui-label {
+						color: $markerBorder;
+					}
+					.bmpui-label {
+						color: darken($fontColor, 10%);
+						display: block;
+						font-size: .95em;
+						border-bottom: 1px solid darken($fontColor, 60%);
+						padding: 0 25px 8px 25px;
+						&:hover {
+							color: $markerBorder;
+						}
+					}
+				}
+			}
+		}
+	}
 	// Chapter Button
 	.bmpui-ui-chaptertogglebutton {
 		background-color: transparent;
@@ -95,9 +156,8 @@
 		}
 	}
 
-
 	// Channel Button
-	.bmpui-ui-chanelltogglebutton {
+	.bmpui-ui-channelToggleButton {
 		background-color: transparent;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -118,7 +178,7 @@
 	.bmpui-channels.bmpui-ui-controlbar {
 		background: none;
 	}
-	.bmpui-container-wrapper .bmpui-chanellPanel {
+	.bmpui-container-wrapper .bmpui-channelPanel {
 		z-index: 99;
 		&:after {
 			display: none !important;
@@ -138,14 +198,14 @@
 		margin: 0;
 		z-index: 100;
 	}
-	.bmpui-chanellPanel {
+	.bmpui-channelPanel {
 		display: block;
 		width: 30%;
 		height: 70%;
 		position: absolute;
 		right: 0;
 		top: 15%;
-		background-color: #e7e5de;
+		background-color: $fontColor;
 		color: black;
 		& > .bmpui-container-wrapper {
 			height: 100%;
@@ -166,7 +226,7 @@
 				}
 			}
 		}
-		.bmpui-chanellLabel {
+		.bmpui-channelLabel {
 			.bmpui-label {
 				display: block;
 			}
@@ -174,109 +234,87 @@
 	}
 
 	// Chanell Asset Button & Text
-	.bmpui-chanellButton {
+	.bmpui-channelButton {
 		cursor: pointer;
 		text-align: right;
 		span {
 			display: block !important;
 			cursor: pointer;
+			font-size: 14px;
+		}
+		.bmpui-label {
+			color: $fidelioFontCI !important;
 		}
 	}
-	.bmpui-chanellText, .bmpui-chanellButton {
+	.bmpui-channelText, .bmpui-channelButton {
 		display: block;
-		height: 6.66%;
+		padding: 0;
+		margin: 0;
+		width: 65%;
 		.bmpui-label {
+			text-transform: uppercase;
 			color: black;
 		}
 	}
+	.bmpui-channelText {
+		width: auto !important;
+		padding: 0 0 0 5%;
+	}
+	.channelLabel {
+		text-transform: uppercase;
+	}
 
 	// Chanell Asset Title
-	.bmpui-chanellTitle {
+	.bmpui-channelTitle {
 		display: block !important;
 		width: 100% !important;
+		word-wrap: break-word;
+		font-family: "Libre Baskerville",serif;
+		font-size: 16px;
+		font-weight: 700;
 	}
 
 	// Chanell Asset Bild
-	.bmpui-chanellPanel .bmpui-chanellBild {
+	.bmpui-channelPanel .bmpui-channelImage {
 		display: block;
 		width: 100% !important;
-		height: 30%;
+		height: 60%;
+		background-position: 50% 50%;
 		background-repeat: no-repeat;
 		background-size: cover;
+		margin-bottom: 5% !important;
 	}
 
+	@media (max-width: 1000px) {
+		.bmpui-channelPanel .bmpui-channelImage {
+			display: none;
+		}
+	}
 
+	@media (max-width: 700px) {
+		.bmpui-channels {
+			display: none;
+		}
+	}
+
+	.bmpui-flimmitChannelAsset {
+		height: 50% !important;
+	}
 
 	// Settings panel arrow
 	.bmpui-ui-settings-panel::after {
 		left: 52%;
 	}
 
-
-
-	// Chapter Label
-  .bmpui-container-wrapper > .bmpui-chaptersPanel {
-      // Chapter Container arrow
-      &:after {
-        left: -10%;
-      }
-
-      .bmpui-container-wrapper {
-		  margin: 0;
-
-			.bmpui-ui-settings-panel-item {
-				border-bottom: none;
-				padding: 0;
-				margin: 0;
-
-				.bmpui-chapterLabel {
-					display: block !important;
-					width: 100%;
-					text-align: center;
-					margin: 10px 0;
-					cursor: pointer;
-
-					&:last-child span {
-						border: none;
-					}
-
-					&:hover .bmpui-label {
-						color: $markerBorder;
-					}
-
-					.bmpui-label {
-						color: darken($fontColor, 10%);
-						display: block;
-						font-size: .95em;
-						border-bottom: 1px solid darken($fontColor, 60%);
-						padding: 0 25px 8px 25px;
-
-						&:hover {
-							color: $markerBorder;
-						}
-					}
-				}
-			}
-      }
-  }
-
-
-
-
 	// Sound Seekbar
-	.bmpui-ui-volumeslider .bmpui-seekbar { 
-
+	.bmpui-ui-volumeslider .bmpui-seekbar {
 		.bmpui-seekbar-playbackposition {
 			background-color: $soundCurrentSeekColor;
 		}
-
 		.bmpui-seekbar-backdrop {
 			background-color: $soundSeekingLine;
 		}
 	}
-
-
-
 
 	// Watermark
 	.bmpui-ui-watermark {
@@ -291,9 +329,6 @@
   		opacity: .7;
 	}
 
-
-
-
 	// Overlays
 	.bmpui-ui-controlbar {
 		background: linear-gradient(to bottom, transparent, $controlbarBackground);
@@ -302,40 +337,30 @@
 		background-color: $bufferOverlayColor;
 	}
 
-
-
-
 	// Settings
 	.bmpui-ui-selectbox {
 		color: $selectboxColor;
-		/*-moz-appearance: none;
-		-webkit-appearance:none;
-		&::-ms-expand {
-			display: none;
-		}
-		border-right: 3px solid lighten(rgba(17, 17, 17, 0.85), 50%);*/
 	}
-
-
-
 
 	// Movie Marker
 	.bmpui-ui-seekbar-label {
-
 		.bmpui-seekbar-label-inner {
 			border-bottom: 0.2em solid $markerBorder;
-
 			&::after {
 				border-top-color: $markerBorder;
 			}
 		}
-
 		.bmpui-seekbar-label-inner > .bmpui-container-wrapper .bmpui-seekbar-thumbnail {
 			width: 12em;
 		}
 	}
+} /* end Components */
 
 
-
-
+figure[data-fullscreen=true] {
+	.bmpui-ui-skin-modern {
+		.bmpui-channelButton {
+			display: none !important;
+		}
+	}
 }
